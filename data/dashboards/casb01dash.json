@@ -105,22 +105,6 @@
       "layout": {"x": 6, "y": 10, "w": 6, "h": 4},
       "type": "chart.horizontalBar",
       "title": "Top Users by Event Count"
-    },
-    {
-      "config": {},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_casb_dataset} login='$user$' action!='Allow' action!='Allowed' | summarize by applicationname, rule_name, action | order by count desc", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
-      "id": "casb_table_blocked",
-      "layout": {"x": 0, "y": 14, "w": 6, "h": 4},
-      "type": "list.table",
-      "title": "Blocked / Denied Activity"
-    },
-    {
-      "config": {"onClickAction": {"type": "Run a new search", "search": "${pack(cribl-search-zscaler).zscaler_casb_dataset} login='$user$' department='$value$'"}, "legend": {"position": "None"}},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_casb_dataset} login='$user$' | summarize by department", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
-      "id": "casb_pie_dept",
-      "layout": {"x": 6, "y": 14, "w": 6, "h": 4},
-      "type": "chart.pie",
-      "title": "Events by Department"
     }
   ],
   "disabled": false,
