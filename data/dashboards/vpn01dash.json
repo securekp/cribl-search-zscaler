@@ -4,7 +4,7 @@
   "createdBy": "pack",
   "modifiedBy": "pack",
   "schedule": {"enabled": false, "cronSchedule": "0 0 * * *", "tz": "UTC", "keepLastN": 2},
-  "name": "ZScaler VPN / Tunnel Logs",
+  "name": "ZScaler VPN Tunnel Logs",
   "cacheTTLSeconds": 3600,
   "elements": [
     {
@@ -108,7 +108,7 @@
     },
     {
       "config": {"onClickAction": {"type": "Run a new search", "search": "${pack(cribl-search-zscaler).zscaler_vpn_dataset} user='$user$' event='$value$'"}, "legend": {"position": "None"}},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_vpn_dataset} user='$user$' event!='' event!='None' | summarize count() by event | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
+      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_vpn_dataset} user='$user$' event!='' event!='None' event!=null | summarize count() by event | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
       "id": "vpn_bar_event",
       "layout": {"x": 0, "y": 14, "w": 6, "h": 4},
       "type": "chart.horizontalBar",
@@ -116,7 +116,7 @@
     },
     {
       "config": {"onClickAction": {"type": "Run a new search", "search": "${pack(cribl-search-zscaler).zscaler_vpn_dataset} user='$user$' eventreason='$value$'"}, "legend": {"position": "None"}},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_vpn_dataset} user='$user$' eventreason!='' eventreason!='None' | summarize count() by eventreason | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
+      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_vpn_dataset} user='$user$' eventreason!='' eventreason!='None' eventreason!=null | summarize count() by eventreason | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
       "id": "vpn_bar_eventreason",
       "layout": {"x": 6, "y": 14, "w": 6, "h": 4},
       "type": "chart.horizontalBar",
@@ -140,5 +140,5 @@
     }
   ],
   "disabled": false,
-  "description": "Analysis of ZScaler VPN / tunnel logs: tunnel samples, tunnel events, types, locations, source/destination IPs, and users."
+  "description": "Analysis of ZScaler VPN tunnel logs: tunnel samples, tunnel events, types, locations, source/destination IPs, and users."
 }

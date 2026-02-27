@@ -100,7 +100,7 @@
     },
     {
       "config": {"onClickAction": {"type": "Run a new search", "search": "${pack(cribl-search-zscaler).zscaler_audit_dataset} adminid='$user$' | extend subcategory_norm=tolower(subcategory) | where subcategory_norm='$value$'"}, "legend": {"position": "None"}},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_audit_dataset} adminid='$user$' subcategory!='None' subcategory!='' | summarize count() by subcategory_norm=tolower(subcategory) | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
+      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_audit_dataset} adminid='$user$' subcategory!='None' subcategory!='' subcategory!=null | summarize count() by subcategory_norm=tolower(subcategory) | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
       "id": "audit_bar_subcategory",
       "layout": {"x": 6, "y": 10, "w": 6, "h": 4},
       "type": "chart.horizontalBar",
@@ -132,5 +132,5 @@
     }
   ],
   "disabled": false,
-  "description": "Analysis of ZScaler Audit logs: admin activity, sign-in/out, categories, success vs failure, and interface (API/UI)."
+  "description": "Analysis of ZScaler Audit logs: admin activity, sign-in/out, categories, success vs failure, interface (API/UI), and admin by login source (clientip)."
 }

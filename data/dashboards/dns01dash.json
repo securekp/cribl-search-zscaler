@@ -84,7 +84,7 @@
     },
     {
       "config": {"onClickAction": {"type": "Run a new search", "search": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' category='$value$'"}, "legend": {"position": "None"}},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' category!='' category!='None' | summarize count() by category | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
+      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' category!='' category!='None' category!=null | summarize count() by category | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
       "id": "dns_bar_category",
       "layout": {"x": 6, "y": 6, "w": 6, "h": 4},
       "type": "chart.horizontalBar",
@@ -92,7 +92,7 @@
     },
     {
       "config": {"onClickAction": {"type": "Run a new search", "search": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' respipcategory='$value$'"}, "legend": {"position": "None"}},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' respipcategory!='' respipcategory!='None' | summarize count() by respipcategory | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
+      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' respipcategory!='' respipcategory!='None' respipcategory!=null | summarize count() by respipcategory | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
       "id": "dns_bar_respcat",
       "layout": {"x": 0, "y": 10, "w": 6, "h": 4},
       "type": "chart.horizontalBar",
@@ -100,7 +100,7 @@
     },
     {
       "config": {"onClickAction": {"type": "Run a new search", "search": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' reqrulelabel='$value$'"}, "legend": {"position": "None"}},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' reqrulelabel!='' reqrulelabel!='None' | summarize count() by reqrulelabel | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
+      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' reqrulelabel!='' reqrulelabel!='None' reqrulelabel!=null | summarize count() by reqrulelabel | sort by count desc | limit 10", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
       "id": "dns_bar_rules",
       "layout": {"x": 6, "y": 10, "w": 6, "h": 4},
       "type": "chart.horizontalBar",
@@ -116,7 +116,7 @@
     },
     {
       "config": {"onClickAction": {"type": "Run a new search", "search": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' location='$value$'"}, "legend": {"position": "None"}},
-      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' location!='' location!='None' | summarize by location", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
+      "search": {"type": "inline", "query": "${pack(cribl-search-zscaler).zscaler_dns_dataset} user='$user$' location!='' location!='None' location!=null | summarize by location", "earliest": "$time_range.earliest$", "latest": "$time_range.latest$", "timezone": "$time_range.timezone$"},
       "id": "dns_pie_location",
       "layout": {"x": 6, "y": 14, "w": 6, "h": 4},
       "type": "chart.pie",

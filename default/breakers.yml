@@ -57,7 +57,7 @@ ZScaler FW Logs:
 Zscaler Datatypes:
   lib: custom
   description: Zscaler Datatypes for ZIA NSS logs
-  tags: zscalernss-dns,zscalernss-web,zscalernss-fw,zscalernss-casb,zscalernss-audit,zscalernss-emaildlp
+  tags: zscaler
   minRawLength: 256
   rules:
     - condition: sourcetype == 'zscalernss-dns'
