@@ -6,30 +6,14 @@ This pack should be used to display data regarding ZScaler logs.
 
 ## Requirements Section
 
-The dataset leveraged here is **zscalernss**. It is expected to be partitioned by sourcetype for best performance. The pack macros use the following sourcetype values (update the macros if your schema differs):
-
-* **Web Logs:** `dataset="zscalernss"` `sourcetype="zscalernss-web"`
-* **Firewall Logs:** `dataset="zscalernss"` `sourcetype="zscalernss-fw"`
-* **CASB Logs:** `dataset="zscalernss"` `sourcetype="zscalernss-casb"`
-* **Audit Logs:** `dataset="zscalernss"` `sourcetype="zscalernss-audit"`
-* **VPN Logs:** `dataset="zscalernss"` `sourcetype="zscalernss-tunnel"`
-* **DNS Logs:** `dataset="zscalernss"` `sourcetype="zscalernss-dns"`
-* **DLP Logs:** `dataset="zscalernss"` `sourcetype="zscalernss-emaildlp"`
-
-
-## Dashboards
-
-The pack includes one dashboard per log type:
-
-| Dashboard | Description |
-|-----------|-------------|
-| **ZScaler Web Logs** | NSS web traffic: threats, DLP, blocked/allowed categories, file types, top URLs. |
-| **ZScaler Firewall Logs** | Firewall traffic: allow/block, categories, rules, locations, apps, top sources/destinations, traffic by country. |
-| **ZScaler CASB Logs** | Cloud Access Security Broker: cloud app usage, DLP categories, threats, policy/rule actions. |
-| **ZScaler Email DLP Logs** | Email DLP: scanned emails, sensitive data types (dictionaries), DLP engines, policy actions, rules, departments, file types. |
-| **ZScaler Audit Logs** | Admin activity: sign-in/out, actions, categories, success vs failure, interface (API/UI), admin by login source (clientip). |
-| **ZScaler DNS Logs** | DNS queries: allowed/blocked, top domains, record types, categories, rules, locations. |
-| **ZScaler VPN Tunnel Logs** | VPN/tunnel: tunnel samples and events, types, locations, source/destination IPs, event types and reasons. |
+The dataset leveraged here is zscalernss. It is expected to be partitioned by sourcetype for best performance. Below are the sourcetypes that are set up currently. If you do not use this schema, make sure to update the macros in this pack to fit what your datasets look like. 
+* Web Logs: dataset="zscalernss" sourcetype="zscalernss_web"
+* Firewall Logs: dataset="zscalernss" sourcetype="zscalernss_fw"
+* CASB Logs: dataset="zscalernss" sourcetype="zscalernss_casb"
+* Audit Logs: dataset="zscalernss" sourcetype="zscalernss_audit"
+* VPN Logs: dataset="zscalernss" sourcetype="zscalernss_tunnel"
+* DNS Logs: dataset="zscalernss" sourcetype="zscalernss_dns"
+* DLP Logs: dataset="zscalernss" sourcetype="zscalernss_emaildlp"
 
 
 ## Using The Pack
@@ -37,9 +21,13 @@ The pack includes one dashboard per log type:
 To use this Pack, follow these steps:
 
 1. Install the pack from the dispensary.
-2. Check dataset naming conventions and update the macros if needed.
-3. View your data using the dashboards or run searches with the pack macros.
+2. Check dataset naming conventions and update the macros if needed. 
+3. Ensure that the dataset has the correct datatype from the pack applied to ensure parsing occurs.
+4. View your data!
 
+## Dashboards
+
+The pack includes one dashboard per log type.
 
 ## Release Notes
 

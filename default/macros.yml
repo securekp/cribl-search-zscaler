@@ -1,7 +1,7 @@
 zscaler_fw_dataset:
   lib: custom
   replacement: 'dataset="zscalernss" sourcetype=="zscalernss-fw" '
-  createdBy: google-oauth2|110925259865737906596
+  createdBy: google-oauth2|102344156790540243001
   modified: 1772137408262
   created: 1751379492265
   description: Dataset name for the ZScaler Firewall data
@@ -10,14 +10,14 @@ zscaler_web_dataset:
   lib: custom
   description: Dataset name for the ZScaler Web data
   replacement: 'dataset="zscalernss" sourcetype=="zscalernss-web" '
-  createdBy: google-oauth2|110925259865737906596
+  createdBy: google-oauth2|102344156790540243001
   modified: 1772137425831
   created: 1751379522377
   tags: zscaler
 zscaler_casb_dataset:
   lib: custom
   replacement: 'dataset="zscalernss" sourcetype=="zscalernss-casb" '
-  createdBy: Kelsey Prior
+  createdBy: google-oauth2|102344156790540243001
   modified: 1772203910678
   created: 1772203910678
   description: Dataset name for the ZScaler CASB data
@@ -25,7 +25,7 @@ zscaler_casb_dataset:
 zscaler_audit_dataset:
   lib: custom
   replacement: 'dataset="zscalernss" sourcetype=="zscalernss-audit" '
-  createdBy: Kelsey Prior
+  createdBy: google-oauth2|102344156790540243001
   modified: 1772203924652
   created: 1772203924652
   description: Dataset name for the ZScaler audit data
@@ -33,7 +33,7 @@ zscaler_audit_dataset:
 zscaler_dns_dataset:
   lib: custom
   replacement: 'dataset="zscalernss" sourcetype=="zscalernss-dns" '
-  createdBy: Kelsey Prior
+  createdBy: google-oauth2|102344156790540243001
   modified: 1772203938806
   created: 1772203938806
   description: Dataset name for the ZScaler DNS data
@@ -41,7 +41,7 @@ zscaler_dns_dataset:
 zscaler_vpn_dataset:
   lib: custom
   replacement: 'dataset="zscalernss" sourcetype=="zscalernss-tunnel" '
-  createdBy: Kelsey Prior
+  createdBy: google-oauth2|102344156790540243001
   modified: 1772203954141
   created: 1772203954141
   description: Dataset name for the ZScaler VPN data
@@ -49,7 +49,7 @@ zscaler_vpn_dataset:
 zscaler_dlp_dataset:
   lib: custom
   replacement: 'dataset="zscalernss" sourcetype=="zscalernss-emaildlp" '
-  createdBy: Kelsey Prior
+  createdBy: google-oauth2|102344156790540243001
   modified: 1772203973232
   created: 1772203973232
   description: Dataset name for the ZScaler DLP data
