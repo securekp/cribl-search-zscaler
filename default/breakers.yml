@@ -54,3 +54,301 @@ ZScaler FW Logs:
       fields:
         - name: datatype
           value: "'zscaler_fw_logs'"
+Zscaler Datatypes:
+  lib: custom
+  description: Zscaler Datatypes for ZIA NSS logs
+  tags: zscalernss-dns,zscalernss-web,zscalernss-fw,zscalernss-casb,zscalernss-audit,zscalernss-emaildlp
+  minRawLength: 256
+  rules:
+    - condition: sourcetype == 'zscalernss-dns'
+      type: json
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: auto
+        length: 150
+      timestampTimezone: local
+      timestampEarliest: -1772129964s
+      timestampLatest: +10years
+      maxEventBytes: 51200
+      disabled: false
+      parserEnabled: false
+      shouldUseDataRaw: true
+      parser:
+        mode: extract
+        type: json
+        srcField: _raw
+        remove: []
+        fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
+        fields:
+          - sourcetype
+          - datetime
+          - user
+          - department
+          - location
+          - reqaction
+          - resaction
+          - reqrulelabel
+          - resrulelabel
+          - dns_reqtype
+          - dns_req
+          - dns_resp
+          - srv_dport
+          - durationms
+          - clt_sip
+          - srv_dip
+          - category
+          - respipcategory
+          - deviceowner
+          - devicehostname
+      eventBreakerRegex: /[\n\r]+(?!\s)/
+      name: Zscaler-nss DNS
+      fields:
+        - name: datatype
+          value: "'zscalerdatatypes_zscaler-nssdns'"
+    - condition: sourcetype == 'zscalernss-web'
+      type: json
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: auto
+        length: 150
+      timestampTimezone: local
+      timestampEarliest: -1772129964s
+      timestampLatest: +10years
+      maxEventBytes: 51200
+      disabled: false
+      parserEnabled: false
+      shouldUseDataRaw: true
+      parser:
+        mode: extract
+        type: json
+        srcField: _raw
+        remove: []
+        fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
+        fields:
+          - sourcetype
+          - datetime
+          - user
+          - department
+          - location
+          - reqaction
+          - resaction
+          - reqrulelabel
+          - resrulelabel
+          - dns_reqtype
+          - dns_req
+          - dns_resp
+          - srv_dport
+          - durationms
+          - clt_sip
+          - srv_dip
+          - category
+          - respipcategory
+          - deviceowner
+          - devicehostname
+      eventBreakerRegex: /[\n\r]+(?!\s)/
+      fields:
+        - name: datatype
+          value: "'zscalerdatatypes_zscaler-nssweb'"
+      name: Zscaler-nss Web
+    - condition: sourcetype == 'zscalernss-fw'
+      type: json
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: auto
+        length: 150
+      timestampTimezone: local
+      timestampEarliest: -1772129964s
+      timestampLatest: +10years
+      maxEventBytes: 51200
+      disabled: false
+      parserEnabled: false
+      shouldUseDataRaw: true
+      parser:
+        mode: extract
+        type: json
+        srcField: _raw
+        remove: []
+        fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
+        fields:
+          - sourcetype
+          - datetime
+          - user
+          - department
+          - location
+          - reqaction
+          - resaction
+          - reqrulelabel
+          - resrulelabel
+          - dns_reqtype
+          - dns_req
+          - dns_resp
+          - srv_dport
+          - durationms
+          - clt_sip
+          - srv_dip
+          - category
+          - respipcategory
+          - deviceowner
+          - devicehostname
+      eventBreakerRegex: /[\n\r]+(?!\s)/
+      fields:
+        - name: datatype
+          value: "'zscalerdatatypes_zscaler-nssfirewall'"
+      name: Zscaler-nss Firewall
+    - condition: sourcetype == 'zscalernss-tunnel'
+      type: json
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: auto
+        length: 150
+      timestampTimezone: local
+      timestampEarliest: -1772129964s
+      timestampLatest: +10years
+      maxEventBytes: 51200
+      disabled: false
+      parserEnabled: false
+      shouldUseDataRaw: true
+      parser:
+        mode: extract
+        type: json
+        srcField: _raw
+        remove: []
+        fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
+        fields:
+          - sourcetype
+          - datetime
+          - user
+          - department
+          - location
+          - reqaction
+          - resaction
+          - reqrulelabel
+          - resrulelabel
+          - dns_reqtype
+          - dns_req
+          - dns_resp
+          - srv_dport
+          - durationms
+          - clt_sip
+          - srv_dip
+          - category
+          - respipcategory
+          - deviceowner
+          - devicehostname
+      eventBreakerRegex: /[\n\r]+(?!\s)/
+      fields:
+        - name: datatype
+          value: "'zscalerdatatypes_zscaler-nsstunnel'"
+      name: Zscaler-nss Tunnel
+    - condition: sourcetype == 'zscalernss-audit'
+      type: json
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: auto
+        length: 150
+      timestampTimezone: local
+      timestampEarliest: -1772129964s
+      timestampLatest: +10years
+      maxEventBytes: 51200
+      disabled: false
+      parserEnabled: false
+      shouldUseDataRaw: true
+      parser:
+        mode: extract
+        type: json
+        srcField: _raw
+        remove: []
+        fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
+        fields:
+          - sourcetype
+          - datetime
+          - user
+          - department
+          - location
+          - reqaction
+          - resaction
+          - reqrulelabel
+          - resrulelabel
+          - dns_reqtype
+          - dns_req
+          - dns_resp
+          - srv_dport
+          - durationms
+          - clt_sip
+          - srv_dip
+          - category
+          - respipcategory
+          - deviceowner
+          - devicehostname
+      eventBreakerRegex: /[\n\r]+(?!\s)/
+      fields:
+        - name: datatype
+          value: "'zscalerdatatypes_zscaler-nssaudit'"
+      name: Zscaler-nss Audit
+    - condition: sourcetype == 'zscalernss-casb'
+      type: json
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: auto
+        length: 150
+      timestampTimezone: local
+      timestampEarliest: -1772129964s
+      timestampLatest: +10years
+      maxEventBytes: 51200
+      disabled: false
+      parserEnabled: false
+      shouldUseDataRaw: true
+      parser:
+        mode: extract
+        type: json
+        srcField: _raw
+        remove: []
+        fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
+        fields:
+          - sourcetype
+          - datetime
+          - user
+          - department
+          - location
+          - reqaction
+          - resaction
+          - reqrulelabel
+          - resrulelabel
+          - dns_reqtype
+          - dns_req
+          - dns_resp
+          - srv_dport
+          - durationms
+          - clt_sip
+          - srv_dip
+          - category
+          - respipcategory
+          - deviceowner
+          - devicehostname
+      eventBreakerRegex: /[\n\r]+(?!\s)/
+      fields:
+        - name: datatype
+          value: "'zscalerdatatypes_zscaler-nsscasb'"
+      name: Zscaler-nss CASB
+    - condition: sourcetype == "zscalernss-emaildlp"
+      type: json
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: auto
+        length: 150
+      timestampTimezone: local
+      timestampEarliest: -1772206492s
+      timestampLatest: +10years
+      maxEventBytes: 51200
+      disabled: false
+      parserEnabled: false
+      shouldUseDataRaw: true
+      parser:
+        mode: extract
+        type: json
+        srcField: _raw
+      eventBreakerRegex: /[\n\r]+(?!\s)/
+      name: ZScalernss-dlp
+      fields:
+        - name: datatype
+          value: "'zscalerdatatypes_zscalernss-dlp'"

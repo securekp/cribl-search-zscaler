@@ -1,1 +1,1 @@
-{"version":"0.9.1","tags":{"streamtags":["search","zscaler"]},"exports":["*"],"displayName":"Cribl Search Zscaler","description":"Analyze Zscaler Logs","author":"Kelsey Prior - Cribl","name":"cribl-search-zscaler"}
+{"name":"cribl-search-zscaler","version":"1.0.0","author":"Kelsey Prior - Cribl","description":"Analyze Zscaler Logs","displayName":"Cribl Search Zscaler","tags":{"streamtags":["search","zscaler"]},"exports":["*"]}
