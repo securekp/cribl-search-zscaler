@@ -71,12 +71,12 @@ Zscaler Datatypes:
       timestampLatest: +10years
       maxEventBytes: 51200
       disabled: false
-      parserEnabled: false
-      shouldUseDataRaw: true
+      parserEnabled: true
+      shouldUseDataRaw: false
       parser:
         mode: extract
         type: json
-        srcField: _raw
+        srcField: _raw.event
         remove: []
         fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
         fields:
@@ -116,12 +116,12 @@ Zscaler Datatypes:
       timestampLatest: +10years
       maxEventBytes: 51200
       disabled: false
-      parserEnabled: false
-      shouldUseDataRaw: true
+      parserEnabled: true
+      shouldUseDataRaw: false
       parser:
         mode: extract
         type: json
-        srcField: _raw
+        srcField: _raw.event
         remove: []
         fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
         fields:
@@ -161,12 +161,12 @@ Zscaler Datatypes:
       timestampLatest: +10years
       maxEventBytes: 51200
       disabled: false
-      parserEnabled: false
-      shouldUseDataRaw: true
+      parserEnabled: true
+      shouldUseDataRaw: false
       parser:
         mode: extract
         type: json
-        srcField: _raw
+        srcField: _raw.event
         remove: []
         fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
         fields:
@@ -206,12 +206,12 @@ Zscaler Datatypes:
       timestampLatest: +10years
       maxEventBytes: 51200
       disabled: false
-      parserEnabled: false
-      shouldUseDataRaw: true
+      parserEnabled: true
+      shouldUseDataRaw: false
       parser:
         mode: extract
         type: json
-        srcField: _raw
+        srcField: _raw.event
         remove: []
         fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
         fields:
@@ -251,12 +251,12 @@ Zscaler Datatypes:
       timestampLatest: +10years
       maxEventBytes: 51200
       disabled: false
-      parserEnabled: false
-      shouldUseDataRaw: true
+      parserEnabled: true
+      shouldUseDataRaw: false
       parser:
         mode: extract
         type: json
-        srcField: _raw
+        srcField: _raw.event
         remove: []
         fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
         fields:
@@ -296,12 +296,12 @@ Zscaler Datatypes:
       timestampLatest: +10years
       maxEventBytes: 51200
       disabled: false
-      parserEnabled: false
-      shouldUseDataRaw: true
+      parserEnabled: true
+      shouldUseDataRaw: false
       parser:
         mode: extract
         type: json
-        srcField: _raw
+        srcField: _raw.event
         remove: []
         fieldFilterExpr: value !== 'N/A' && value !== 'NA' && value !== 'None'
         fields:
@@ -341,12 +341,12 @@ Zscaler Datatypes:
       timestampLatest: +10years
       maxEventBytes: 51200
       disabled: false
-      parserEnabled: false
-      shouldUseDataRaw: true
+      parserEnabled: true
+      shouldUseDataRaw: false
       parser:
         mode: extract
         type: json
-        srcField: _raw
+        srcField: _raw.event
       eventBreakerRegex: /[\n\r]+(?!\s)/
       name: ZScalernss-dlp
       fields:
