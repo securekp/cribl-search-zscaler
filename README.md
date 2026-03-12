@@ -1,7 +1,7 @@
 # Cribl Search ZScaler
 ----
 
-This pack should be used to display data regarding ZScaler logs.
+This pack should be used to display data regarding ZScaler logs and used in conjunction with the Cribl Stream ZScaler pack https://packs.cribl.io/packs/cribl-zscaler. 
 
 
 ## Requirements Section
@@ -30,6 +30,8 @@ To use this Pack, follow these steps:
 The pack includes one dashboard per log type.
 
 ## Release Notes
+### Version 1.0.1 - 2026-03-12
+Added parser for _raw.event to each datatype rule. This is necessary when using the Stream ZScaler pack. 
 
 ### Version 1.0.0 - 2026-02-27
 Updated macros for better efficiency in searching; added dashboards for CASB, Audit, DLP, DNS, VPN logs.
