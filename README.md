@@ -1,7 +1,7 @@
-# Cribl Search ZScaler
+# Cribl Search Zscaler
 ----
 
-This pack should be used to display data regarding ZScaler logs and used in conjunction with the Cribl Stream ZScaler pack https://packs.cribl.io/packs/cribl-zscaler. 
+This pack should be used to display data regarding Zscaler logs and used in conjunction with the Cribl Stream Zscaler pack https://packs.cribl.io/packs/cribl-zscaler. 
 
 
 ## Requirements Section
@@ -23,7 +23,7 @@ To use this Pack, follow these steps:
 1. Install the pack from the dispensary.
 2. Check dataset naming conventions and update the macros if needed. 
 3. Ensure that the dataset has the correct datatype from the pack applied to ensure parsing occurs.
-    a. If your data is coming from Stream using the ZScaler pack, use the "ZScaler Datatypes" datatype. This is what is configured by default.
+    a. If your data is coming from Stream using the Zscaler pack, use the "Zscaler Datatypes" datatype. This is what is configured by default.
     b. If your data is coming via passthru, use the "Zscaler Raw Datatypes" datatype.
 4. View your data!
 
@@ -32,14 +32,14 @@ To use this Pack, follow these steps:
 The pack includes one dashboard per log type.
 
 ## Release Notes
-### Version 1.0.3 - 2026-05-27
+### Version 1.0.4 - 2026-06-02
 Update naming mechanisms
 
 ### Version 1.0.2 - 2026-05-01
-Added separate datatypes for passthru vs using the Cribl Stream ZScaler pack. Cleaned up readme. Switched to using parent searches for each dashboard that operates better with parent searches.
+Added separate datatypes for passthru vs using the Cribl Stream Zscaler pack. Cleaned up readme. Switched to using parent searches for each dashboard that operates better with parent searches.
 
 ### Version 1.0.1 - 2026-03-12
-Added parser for _raw.event to each datatype rule. This is necessary when using the Stream ZScaler pack. 
+Added parser for _raw.event to each datatype rule. This is necessary when using the Stream Zscaler pack. 
 
 ### Version 1.0.0 - 2026-02-27
 Updated macros for better efficiency in searching; added dashboards for CASB, Audit, DLP, DNS, VPN logs.

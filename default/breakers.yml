@@ -1,7 +1,7 @@
 Zscaler Datatypes:
   lib: custom
   description: Zscaler Datatypes for ZIA NSS logs coming through Cribl Stream's
-    ZScaler pack.
+    Zscaler pack.
   tags: zscalernss-dns,zscalernss-web,zscalernss-fw,zscalernss-casb,zscalernss-audit,zscalernss-emaildlp
   minRawLength: 256
   rules:
@@ -293,7 +293,7 @@ Zscaler Datatypes:
         type: json
         srcField: _raw.event
       eventBreakerRegex: /[\n\r]+(?!\s)/
-      name: ZScalernss-dlp
+      name: Zscalernss-dlp
       fields:
         - name: datatype
           value: "'zscalerdatatypes_zscalernss-dlp'"
